@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="all">
+
+    <img class="image"
+      src="https://w0.peakpx.com/wallpaper/976/537/HD-wallpaper-three-jokers-joker-movie-joker-superheroes-supervillain.jpg"
+      alt="">
+    <!--
+ <h2>Jeane Cardiente</h2> -->
+    <!-- <input type="text" [(ngModel)] = "InputValue"> -->
+    <br>
+    <!-- <button [disabled]="isDisabled"
+(click)="sampleClick()"
+>sample</button> -->
+    <!--
+<button (click)="increaseValue()">Add</button>
+<button (click)="decreaseValue()">Subtract</button>
+<app-first [firstInput]="numberValue" ></app-first>
+
+<app-second (secondOutput) = "recieveEvent()"></app-second> -->
+    <br>
+
+
+    <div *ngIf="!isAddStudent">
+      <h2>Students List</h2>
+
+      <button (click)="addNewStudent()">Add New Student</button>
+      <div *ngFor=" let student of studentsList">
+        <app-student [studentIn]="student"></app-student>
+
+
+      </div>
+
+    </div>
+
+
+    <div *ngIf="isAddStudent">
+      <app-add-student (studentOut)="addStudent($event)"></app-add-student>
+
+    </div>
